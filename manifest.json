@@ -1,0 +1,23 @@
+{
+    "name": "Cerrage GEE",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Restyle errors in the google cloud console",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.earthengine.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
